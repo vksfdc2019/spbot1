@@ -1,0 +1,17 @@
+services:
+  - type: web
+    name: sparring-bot
+    env: node
+    plan: free
+    buildCommand: npm install && cd client && npm install && npm run build
+    startCommand: npm start
+    healthCheckPath: /api/health
+    envVars:
+      - key: NODE_ENV
+        value: production
+      - key: OPENAI_MODEL
+        value: gpt-4o-mini
+      - key: PORT
+        generateValue: true
+    domains:
+      - sparring-bot.onrender.com
