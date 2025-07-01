@@ -37,7 +37,16 @@ const upload = multer({
 
 app.use(cors());
 app.use(express.json());
-app.use(express.static(path.join(__dirname, 'client/build')));
+
+// Serve static files from client build directory if it exists
+const clientBuildPath = path.join(__dirname, 'client/build');
+const fs = require('fs');
+
+if (fs.existsSync(clientBuildPath)) {
+  app.use(express.static(clientBuildPath));
+} else {
+  console.log('⚠️ Client build directory not found, serving API only');
+}
 
 // API Routes
 
@@ -654,7 +663,16 @@ app.delete('/api/recordings/:sessionId/:type?', userService.authMiddleware('admi
 
 // Serve React app
 app.get('*', (req, res) => {
-  res.sendFile(path.join(__dirname, 'client/build', 'index.html'));
+  const indexPath = path.join(__dirname, 'client/build', 'index.html');
+  if (fs.existsSync(indexPath)) {
+    res.sendFile(indexPath);
+  } else {
+    res.json({ 
+      message: 'Sparring Bot API Server', 
+      status: 'API running - Frontend build not available',
+      endpoints: ['/api/health', '/api/session-types', '/api/auth/login']
+    });
+  }
 });
 
 const PORT = process.env.PORT || 8080;
