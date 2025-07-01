@@ -1,0 +1,30 @@
+[
+  {
+    "id": "admin_001",
+    "username": "admin",
+    "email": "admin@sparringbot.com",
+    "password": "$2a$10$p5d.NjFoQxWOy6.kVGh4jeWvpAcnL2.LplXazcIyjeM/D8K38mCTW",
+    "role": "admin",
+    "createdAt": "2025-06-30T23:32:59.333Z",
+    "isActive": true,
+    "profile": {
+      "firstName": "System",
+      "lastName": "Administrator",
+      "department": "IT"
+    }
+  },
+  {
+    "id": "user_mcjrhhepduf7i",
+    "username": "vamsee",
+    "email": "vksfdc2019@outlook.com",
+    "password": "$2a$10$l97Huft29tHzdF5tp9ed2ucc045eAgos6ny1iOnObz6lq9D5/08gK",
+    "role": "user",
+    "createdAt": "2025-07-01T00:00:20.925Z",
+    "isActive": true,
+    "profile": {
+      "firstName": "Vamsee",
+      "lastName": "K",
+      "department": "Engineering"
+    }
+  }
+]

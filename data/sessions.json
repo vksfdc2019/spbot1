@@ -1,0 +1,142 @@
+[
+  {
+    "id": "sess_mcjw96zuymctn",
+    "agentName": "vamsee",
+    "personality": {
+      "id": "normal",
+      "name": "Normal Customer",
+      "description": "Calm and reasonable, asking for help with a standard issue.",
+      "traits": [
+        "Patient and understanding",
+        "Clearly explains the problem",
+        "Appreciates helpful service",
+        "Responds well to solutions"
+      ]
+    },
+    "scenario": {
+      "id": "brake_repair",
+      "name": "Brake Repair Issue",
+      "description": "Customer's car brakes are making noise after recent repair",
+      "context": "Customer had brake pads replaced last week, now hearing grinding noise",
+      "expectedIssues": [
+        "Quality of repair work",
+        "Safety concerns",
+        "Warranty coverage",
+        "Inconvenience caused"
+      ]
+    },
+    "startTime": "2025-07-01T02:13:52.170Z",
+    "endTime": "2025-07-01T02:14:16.920Z",
+    "exchanges": [],
+    "finalScore": 0,
+    "status": "completed",
+    "hasRecording": true,
+    "recordingUrl": null,
+    "duration": 24750
+  },
+  {
+    "id": "sess_mck0k8d0cddvu",
+    "agentName": "vamsee",
+    "personality": {
+      "id": "aggressive",
+      "name": "Aggressive Customer",
+      "description": "Very hostile and confrontational, testing agent's limits.",
+      "traits": [
+        "Uses harsh language",
+        "Blames the agent personally",
+        "Threatens to leave/complain",
+        "Requires exceptional de-escalation skills"
+      ]
+    },
+    "scenario": {
+      "id": "brake_repair",
+      "name": "Brake Repair Issue",
+      "description": "Customer's car brakes are making noise after recent repair",
+      "context": "Customer had brake pads replaced last week, now hearing grinding noise",
+      "expectedIssues": [
+        "Quality of repair work",
+        "Safety concerns",
+        "Warranty coverage",
+        "Inconvenience caused"
+      ]
+    },
+    "startTime": "2025-07-01T04:14:25.620Z",
+    "endTime": "2025-07-01T04:15:00.221Z",
+    "exchanges": [],
+    "finalScore": 0,
+    "status": "completed",
+    "hasRecording": true,
+    "recordingUrl": null,
+    "duration": 34601
+  },
+  {
+    "id": "sess_mck0uhk0c9w3u",
+    "agentName": "vamsee",
+    "personality": {
+      "id": "unhappy",
+      "name": "Unhappy Customer",
+      "description": "Disappointed but still cooperative, hoping for a resolution.",
+      "traits": [
+        "Expresses disappointment",
+        "Still willing to work together",
+        "Wants to be heard",
+        "Can be won over with good service"
+      ]
+    },
+    "scenario": {
+      "id": "brake_repair",
+      "name": "Brake Repair Issue",
+      "description": "Customer's car brakes are making noise after recent repair",
+      "context": "Customer had brake pads replaced last week, now hearing grinding noise",
+      "expectedIssues": [
+        "Quality of repair work",
+        "Safety concerns",
+        "Warranty coverage",
+        "Inconvenience caused"
+      ]
+    },
+    "startTime": "2025-07-01T04:22:24.096Z",
+    "endTime": "2025-07-01T04:22:39.772Z",
+    "exchanges": [],
+    "finalScore": 0,
+    "status": "completed",
+    "hasRecording": false,
+    "recordingUrl": null,
+    "duration": 15676
+  },
+  {
+    "id": "sess_mck77hh7eebai",
+    "agentName": "vamsee",
+    "personality": {
+      "id": "unhappy",
+      "name": "Unhappy Customer",
+      "description": "Disappointed but still cooperative, hoping for a resolution.",
+      "traits": [
+        "Expresses disappointment",
+        "Still willing to work together",
+        "Wants to be heard",
+        "Can be won over with good service"
+      ]
+    },
+    "scenario": {
+      "id": "brake_repair",
+      "name": "Brake Repair Issue",
+      "description": "Customer's car brakes are making noise after recent repair",
+      "context": "Customer had brake pads replaced last week, now hearing grinding noise",
+      "expectedIssues": [
+        "Quality of repair work",
+        "Safety concerns",
+        "Warranty coverage",
+        "Inconvenience caused"
+      ]
+    },
+    "startTime": "2025-07-01T07:20:28.219Z",
+    "endTime": "2025-07-01T07:20:43.142Z",
+    "exchanges": [],
+    "finalScore": 0,
+    "status": "completed",
+    "hasRecording": false,
+    "recordingUrl": null,
+    "duration": 14923
+  }
+]

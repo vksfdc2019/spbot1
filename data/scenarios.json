@@ -1,0 +1,98 @@
+{
+  "personalities": [
+    {
+      "id": "normal",
+      "name": "Normal Customer",
+      "description": "Calm and reasonable, asking for help with a standard issue.",
+      "traits": [
+        "Patient and understanding",
+        "Clearly explains the problem",
+        "Appreciates helpful service",
+        "Responds well to solutions"
+      ]
+    },
+    {
+      "id": "unhappy",
+      "name": "Unhappy Customer", 
+      "description": "Disappointed but still cooperative, hoping for a resolution.",
+      "traits": [
+        "Expresses disappointment",
+        "Still willing to work together",
+        "Wants to be heard",
+        "Can be won over with good service"
+      ]
+    },
+    {
+      "id": "angry",
+      "name": "Angry Customer",
+      "description": "Frustrated and demanding, but not abusive.",
+      "traits": [
+        "Raises voice occasionally",
+        "Demands immediate action",
+        "May interrupt explanations", 
+        "Needs empathy and quick solutions"
+      ]
+    },
+    {
+      "id": "aggressive",
+      "name": "Aggressive Customer",
+      "description": "Very hostile and confrontational, testing agent's limits.",
+      "traits": [
+        "Uses harsh language",
+        "Blames the agent personally",
+        "Threatens to leave/complain",
+        "Requires exceptional de-escalation skills"
+      ]
+    }
+  ],
+  "scenarios": [
+    {
+      "id": "brake_repair",
+      "name": "Brake Repair Issue",
+      "description": "Customer's car brakes are making noise after recent repair",
+      "context": "Customer had brake pads replaced last week, now hearing grinding noise",
+      "expectedIssues": [
+        "Quality of repair work",
+        "Safety concerns",
+        "Warranty coverage",
+        "Inconvenience caused"
+      ]
+    },
+    {
+      "id": "oil_change",
+      "name": "Oil Change Problem", 
+      "description": "Wrong oil type used during service",
+      "context": "Customer requested synthetic oil but received conventional oil",
+      "expectedIssues": [
+        "Service accuracy",
+        "Price difference",
+        "Engine protection concerns",
+        "Trust in service quality"
+      ]
+    },
+    {
+      "id": "transmission",
+      "name": "Transmission Repair",
+      "description": "Expensive transmission repair estimate seems too high",
+      "context": "Customer received $3000 estimate for transmission rebuild",
+      "expectedIssues": [
+        "Cost justification",
+        "Second opinion options",
+        "Warranty terms",
+        "Alternative solutions"
+      ]
+    },
+    {
+      "id": "warranty_claim",
+      "name": "Warranty Claim Denial",
+      "description": "Warranty claim was denied for engine repair",
+      "context": "Customer's engine failed but warranty claim was rejected due to missed maintenance",
+      "expectedIssues": [
+        "Policy interpretation",
+        "Documentation requirements",
+        "Appeal process",
+        "Fair treatment expectations"
+      ]
+    }
+  ]
+}

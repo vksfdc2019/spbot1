@@ -1,0 +1,119 @@
+{
+  "name": "sparring-bot",
+  "version": "1.0.0",
+  "description": "Voice-enabled training bot for customer service agents",
+  "main": "electron-main.js",
+  "bin": "server.js",
+  "pkg": {
+    "scripts": [
+      "server.js",
+      "services/**/*.js"
+    ],
+    "assets": [
+      "client/build/**/*",
+      "data/**/*",
+      ".env*"
+    ],
+    "targets": [
+      "node18-win-x64"
+    ],
+    "outputPath": "portable/"
+  },
+  "scripts": {
+    "start": "node server.js",
+    "dev": "concurrently \"npm run server\" \"npm run client\"",
+    "server": "nodemon server.js",
+    "client": "cd client && npm start",
+    "build": "cd client && npm run build",
+    "install-all": "npm install && cd client && npm install",
+    "windows-setup": "cd scripts && windows-setup.bat",
+    "windows-start": "cd scripts && windows-start.bat",
+    "windows-test": "cd scripts && windows-test.bat",
+    "windows-validate": "cd scripts && windows-validate.bat",
+    "windows-package": "cd scripts && create-windows-package.bat",
+    "windows-advanced": "powershell -ExecutionPolicy Bypass -File scripts/Install-SparringBot-Advanced.ps1",
+    "windows-manager": "cd scripts && windows-manager.bat",
+    "create-installer": "node scripts/create-installer.js",
+    "build-exe": "npm run build && npm run create-installer",
+    "build-portable": "pkg . --out-path portable/",
+    "create-simple-package": "scripts\\create-simple-package.bat",
+    "create-advanced-package": "node scripts/create-advanced-package.js",
+    "package-windows": "npm run create-advanced-package",
+    "electron": "electron .",
+    "electron-dev": "electron . --dev",
+    "build-installer": "electron-builder"
+  },
+  "dependencies": {
+    "bcryptjs": "^2.4.3",
+    "cors": "^2.8.5",
+    "dotenv": "^16.3.1",
+    "express": "^4.18.2",
+    "helmet": "^7.0.0",
+    "jsonwebtoken": "^9.0.2",
+    "multer": "^2.0.1",
+    "openai": "^4.20.1",
+    "socket.io": "^4.7.2",
+    "uuid": "^9.0.1"
+  },
+  "devDependencies": {
+    "archiver": "^7.0.1",
+    "concurrently": "^8.2.0",
+    "electron": "^37.1.0",
+    "electron-builder": "^26.0.12",
+    "nodemon": "^3.0.1",
+    "pkg": "^5.8.1"
+  },
+  "keywords": [
+    "voice",
+    "training",
+    "bot",
+    "customer-service",
+    "ai"
+  ],
+  "author": "Vishnu",
+  "license": "MIT",
+  "homepage": "./",
+  "build": {
+    "appId": "com.sparringbot.training",
+    "productName": "Sparring Bot",
+    "directories": {
+      "output": "dist"
+    },
+    "files": [
+      "electron-main.js",
+      "server.js",
+      "services/**/*",
+      "data/**/*",
+      "client/build/**/*",
+      "node_modules/**/*",
+      ".env*",
+      "package.json"
+    ],
+    "win": {
+      "target": [
+        {
+          "target": "nsis",
+          "arch": [
+            "x64"
+          ]
+        },
+        {
+          "target": "portable",
+          "arch": [
+            "x64"
+          ]
+        }
+      ]
+    },
+    "nsis": {
+      "oneClick": false,
+      "allowToChangeInstallationDirectory": true,
+      "createDesktopShortcut": true,
+      "createStartMenuShortcut": true,
+      "shortcutName": "Sparring Bot"
+    },
+    "extraMetadata": {
+      "main": "electron-main.js"
+    }
+  }
+}
